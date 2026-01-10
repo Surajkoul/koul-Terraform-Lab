@@ -16,7 +16,7 @@ resource "google_compute_instance" "tf_instance_1" {
     network = "tf-vpc-620556"
     subnetwork = "projects/${var.project_id)/regions/us-east4/subnetworks/subnet-01"
     access config {}  
-# By default a VM in GCP only gets a private IP form the subnet, Adding access_config block tells the GCP to assign an external(public IP) address to the VM.
+    # By default a VM in GCP only gets a private IP form the subnet, Adding access_config block tells the GCP to assign an external(public IP) address to the VM.
   }
 
   metadata startup script <<-EOT
