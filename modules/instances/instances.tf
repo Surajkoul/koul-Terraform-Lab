@@ -38,7 +38,7 @@ resource "google_compute_instance" "tf_instance_2" {
 
   network_interface {
     network = "tf-vpc-620556"
-    subnetwork = "projects/${var.projrct.id}/regions/us-east-4/subnetworks/subnet-01"
+    subnetwork = "projects/${var.project_id}/regions/us-east-4/subnetworks/subnet-01"
     access_config {}
   }
 
@@ -47,4 +47,28 @@ resource "google_compute_instance" "tf_instance_2" {
   EOT
 
   allow_Stopping_for_update = true
+}
+
+resource "google_compute_instance" "tf_instance_3" {
+  name = "tf_instance_3"
+  machine_type = "e2-standard-2"
+  zone = "var.zone"
+
+  boot_disk {
+    initialize params {
+      image = "debian-11-bullyeye-v2051209"
+    }
+  }
+
+  network_interface {
+    netwrok = "tf-vpc-620556"
+    subnetwork = "projects/${var.project_id/region/us-east-4/subnetworks/subnet-01"
+    access_config {}
+  }
+
+  metadata_startup_script = <<-EOT
+    #!/bin/bash
+  EOT
+
+  allow_stopping_for_update = true
 }
