@@ -7,7 +7,7 @@ on:
 
 jobs:
   create-folder:
-    runs-on: windows-latest   # use Windows runner
+    runs-on: self-hosted   # use Windows runner
 
     steps:
       - name: Checkout code
