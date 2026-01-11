@@ -10,7 +10,8 @@ terraform {
 }
 
 provider "aws" {
-    region = "us-east-1"
+    region = var.region
+    availability_zone = var.availability_zone
 }
 
 # Ec2 instance module

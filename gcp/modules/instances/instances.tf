@@ -4,6 +4,7 @@ resource "google_compute_instance" "tf_instance_1" {
   name = "tf-instance-1"
   machine type = "e2-standard-2" #e.g., "e2-medium"
   zone = var.zone
+}
 
   boot disk {
     initialize params {
