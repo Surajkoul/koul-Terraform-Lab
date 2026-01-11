@@ -1,0 +1,18 @@
+name: Create Folder Test
+
+on:
+  workflow_dispatch:   # allows manual trigger from GitHub UI
+  push:
+    branches: [ "main" ]
+
+jobs:
+  create-folder:
+    runs-on: windows-latest   # use Windows runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create new folder
+        run: |
+          mkdir F:\Cheeku-DONOTDELETE\MyNewFolder
