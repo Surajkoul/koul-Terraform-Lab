@@ -4,7 +4,7 @@ terraform {
     required providers {
         aws = {
             source = "hashicorp/aws"
-            version = ">= 5.0"
+            version = ">= 5.1"
         }
     }
 }
@@ -33,4 +33,5 @@ module "storage" {
     volume_name         = "terraform-aws-volume1"
     device_name         = "awslab-device"
     instance_id         = "module.ec2_instance.instance_id"
+
 }
