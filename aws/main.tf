@@ -4,7 +4,7 @@ terraform {
     required providers {
         aws = {
             source = "hashicorp/aws"
-            version = ">= 5.1"
+            version = ">= 5.0"
         }
     }
 }
@@ -35,3 +35,4 @@ module "storage" {
     instance_id         = "module.ec2_instance.instance_id"
 
 }
+
